@@ -43,16 +43,16 @@
     endforeach()
 
     # Set Compilers
-    find_program(CLANG_EXECUTBALE NAMES "clang" "clang.exe" PATHS ENV LLVMInstallDir PATH_SUFFIXES "bin" NO_DEFAULT_PATH)
-    find_program(CLANG_EXECUTBALE NAMES "clang" "clang.exe" PATHS ENV LLVMInstallDir PATH_SUFFIXES "bin")
-    find_program(CLANG_EXECUTBALE NAMES "clang" "clang.exe" PATHS ENV LLVMInstallDir NO_DEFAULT_PATH)
-    find_program(CLANG_EXECUTBALE NAMES "clang" "clang.exe" PATHS ENV LLVMInstallDir)
+    find_program(CLANG_EXECUTABLE NAMES "clang" "clang.exe" PATHS ENV LLVMInstallDir PATH_SUFFIXES "bin" NO_DEFAULT_PATH)
+    find_program(CLANG_EXECUTABLE NAMES "clang" "clang.exe" PATHS ENV LLVMInstallDir PATH_SUFFIXES "bin")
+    find_program(CLANG_EXECUTABLE NAMES "clang" "clang.exe" PATHS ENV LLVMInstallDir NO_DEFAULT_PATH)
+    find_program(CLANG_EXECUTABLE NAMES "clang" "clang.exe" PATHS ENV LLVMInstallDir)
 
-    if(NOT CLANG_EXECUTBALE)
+    if(NOT CLANG_EXECUTABLE)
       message(SEND_ERROR "Clang was not found!") # Not a FATAL_ERROR due to being a toolchain!
     endif()
 
-    get_filename_component(LLVM_BIN_DIR "${CLANG_EXECUTBALE}" DIRECTORY)
+    get_filename_component(LLVM_BIN_DIR "${CLANG_EXECUTABLE}" DIRECTORY)
     list(INSERT CMAKE_PROGRAM_PATH 0 "${LLVM_BIN_DIR}")
 
     set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "Embedded")

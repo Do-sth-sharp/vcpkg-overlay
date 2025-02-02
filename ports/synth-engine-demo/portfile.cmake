@@ -1,7 +1,7 @@
 ﻿find_program (GIT git)
 
 set (GIT_URL "https://github.com/Do-sth-sharp/SynthEngineDemo.git")
-set (GIT_REV "162b46524509791600f6cab5731263316d506a87")
+set (GIT_REV "6f0757963f3b4b806f529f09e907e646bc043f10")
 
 set (SOURCE_PATH ${CURRENT_BUILDTREES_DIR}/src)
 
@@ -39,7 +39,7 @@ vcpkg_cmake_install ()
 vcpkg_cmake_config_fixup (PACKAGE_NAME SynthEngineDemo CONFIG_PATH lib/cmake/SynthEngineDemo)
 #vcpkg_copy_pdbs ()
 
-file (REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/lib" "${CURRENT_PACKAGES_DIR}/lib")
+#file (REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/lib" "${CURRENT_PACKAGES_DIR}/lib")
 file (REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/share")
 file (INSTALL "${SOURCE_PATH}/LICENSE" DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}" RENAME copyright)
 file (INSTALL "${SOURCE_PATH}/juce-vst3-dev-kit/LICENSE" DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}" RENAME copyright-JUCEVST3DEVKIT)
@@ -50,3 +50,4 @@ file (INSTALL "${SOURCE_PATH}/juce-vst3-dev-kit/LICENSE-VST3SDK.txt" DESTINATION
 file (INSTALL "${SOURCE_PATH}/juce-vst3-dev-kit/JUCE/LICENSE.md" DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}" RENAME copyright-JUCE)
 
 set (VCPKG_POLICY_EMPTY_INCLUDE_FOLDER enabled)
+set (VCPKG_POLICY_ALLOW_EMPTY_FOLDERS enabled)

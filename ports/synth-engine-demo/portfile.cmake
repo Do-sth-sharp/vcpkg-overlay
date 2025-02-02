@@ -1,7 +1,7 @@
 ﻿find_program (GIT git)
 
 set (GIT_URL "https://github.com/Do-sth-sharp/SynthEngineDemo.git")
-set (GIT_REV "09f50b1645f2a70ce03ea4f40e754491bb391b0f")
+set (GIT_REV "162b46524509791600f6cab5731263316d506a87")
 
 set (SOURCE_PATH ${CURRENT_BUILDTREES_DIR}/src)
 
@@ -33,8 +33,6 @@ vcpkg_execute_required_process (
 
 vcpkg_cmake_configure (
 	SOURCE_PATH "${SOURCE_PATH}"
-	OPTIONS
-		-DSYNTH_ENGINE_DEMO_VCPKG_TOOLS_HINT=ON
 )
 
 vcpkg_cmake_install ()

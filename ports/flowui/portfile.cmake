@@ -1,7 +1,7 @@
 ﻿find_program (GIT git)
 
 set (GIT_URL "https://github.com/FangCunWuChang/FlowUI.git")
-set (GIT_REV "1eab497082637cdcc6c70a0a443717ba647e1592")
+set (GIT_REV "08bb4a3c159b352cdb19c2b7de55d7b7aad72d2e")
 
 set (SOURCE_PATH ${CURRENT_BUILDTREES_DIR}/src)
 

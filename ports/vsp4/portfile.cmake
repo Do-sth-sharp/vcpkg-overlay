@@ -1,4 +1,4 @@
-﻿find_program (GIT git)
+find_program (GIT git)
 
 set (GIT_URL "https://github.com/Do-sth-sharp/VocalShaperProject4.git")
 set (GIT_REV "0e75e68b3f1d33e0f79133e37c8881b32b0010eb")
@@ -33,6 +33,7 @@ vcpkg_execute_required_process (
 
 vcpkg_cmake_configure (
 	SOURCE_PATH "${SOURCE_PATH}"
+	DISABLE_PARALLEL_CONFIGURE
 )
 
 vcpkg_cmake_install ()

@@ -1,4 +1,4 @@
-﻿find_program (GIT git)
+find_program (GIT git)
 
 set (GIT_URL "https://github.com/Do-sth-sharp/cmake-lame.git")
 set (GIT_REV "dda85e8f2e1086259c42d33637c5d2e727be8eb9")
@@ -33,6 +33,7 @@ vcpkg_execute_required_process (
 
 vcpkg_cmake_configure (
 	SOURCE_PATH "${SOURCE_PATH}"
+	DISABLE_PARALLEL_CONFIGURE
 	OPTIONS
 		-DLAME_VCPKG_TOOLS_HINT=ON
 )
